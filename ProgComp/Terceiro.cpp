@@ -11,5 +11,5 @@ int main()
     int horas = dias * 24;
     cout << dias << " dias tem " << horas << " horas." << endl;
 
-    return 0;
+    return 1;
 }
