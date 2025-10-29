@@ -1,14 +1,13 @@
 #include <iostream>
-using namespace std;
-int main()
-{
-	system("chcp 1252 > null");
+#include <cstdlib>
+#include <string>
 
-	// exibindo uma frase que contém acentos
-	cout << "Acentuação é possível?" << endl;
-	// leia uma palavra que contém acentos
-	char palavra[40];
-	cin >> palavra;
-	// exibindo o que foi lido
-	cout << palavra << endl;
+using namespace std;
+int main(int argc, char** argv)
+{
+	if (argc > 1) {
+		cout << argv[0] << " " << argv[1];
+		string app = argv[1];
+		system(app.c_str()); 
+	}
 }
