@@ -9,18 +9,13 @@ int main(void)
 {
 	system("chcp 1252 > null");
 
-	int qtdAnos, qtdCigarros;
-	double precoCarteiras, totalGasto;
+	int n;
 
-	cout << "A quantos anos você fuma? ";
-	cin >> qtdAnos;
-	cout << "Quantos cigarros você fuma por dia? ";
-	cin >> qtdCigarros;
-	cout << "Qual é o preço médio de uma carteira de cigarros? ";
-	cin >> precoCarteiras;
-
-	totalGasto = (qtdAnos * 365) * qtdCigarros / 20.0 * precoCarteiras;
-
-	cout << "Você gastou até agora R$" << totalGasto << " com gastos";
-
+	cout << "Tabuada de n" << endl;
+	cout << "------------" << endl;
+	cout << "Entre com um número n (0 a 9): ";
+	cin >> n;
+	for (int i = 0; i < 10; i++) {
+		cout << n << " x " << i << " = " << n * i << endl;
+	}
 }
