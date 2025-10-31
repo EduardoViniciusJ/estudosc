@@ -3,11 +3,13 @@
 #include <string>
 
 using namespace std;
-int main(int argc, char** argv)
+
+int main(void)
 {
-	if (argc > 1) {
-		cout << argv[0] << " " << argv[1];
-		string app = argv[1];
-		system(app.c_str()); 
-	}
+	system("chcp 1252 > null");
+
+
+	float altura, largura, comprimento;
+	cin >> altura >> largura >> comprimento;
+	cout << "O volume é " << altura * largura * comprimento << " cm cúbicos.";
 }
