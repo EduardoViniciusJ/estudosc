@@ -8,9 +8,10 @@ int main(void)
 {
 	system("chcp 1252 > null");
 
-	int minutos;
-	cout << "Digite uma quantidade de minutos ";
-	cin >> minutos;
-	int segundos = 60 * minutos;
-	cout << "Existem " << segundos << " segundos em " << minutos << " minutos.";
+	int medida;
+
+	cout << "Medida: ";
+	cin >> medida;
+	cout << "2x medida: " << medida * 2 << endl;
+	cout << "Medida ao quadrado: " << medida * medida;
 }
