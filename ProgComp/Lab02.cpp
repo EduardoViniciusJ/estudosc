@@ -8,10 +8,9 @@ int main(void)
 {
 	system("chcp 1252 > null");
 
-	int medida;
-
-	cout << "Medida: ";
-	cin >> medida;
-	cout << "2x medida: " << medida * 2 << endl;
-	cout << "Medida ao quadrado: " << medida * medida;
+	int idade, dias;
+	cout << "Digite sua idade: ";
+	cin >> idade;	
+	dias = idade * 365;
+	cout << idade << " anos equivalem a " << dias << " dias.";
 }
