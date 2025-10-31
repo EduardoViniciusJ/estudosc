@@ -8,8 +8,11 @@ int main(void)
 {
 	system("chcp 1252 > null");
 
-	cout << "Entre com a altura, largura e comprimento: " << endl;
-	float altura, largura, comprimento;
-	cin >> altura; cin >> largura; cin >> comprimento;
-	cout << "O volume é " << altura * largura * comprimento << " cm cúbicos.";
+	int horas, minutos;
+	char operador;
+
+	cout << "Que horas são? ";
+	cin >> horas >> operador >> minutos;
+	cout << horas << " horas" << endl;
+	cout << minutos << " minutos" << endl;
 }
