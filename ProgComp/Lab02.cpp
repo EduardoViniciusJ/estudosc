@@ -3,19 +3,44 @@
 
 using namespace std;
 
+void Linha();
+void Pequena();
+void Media();
+void Grande();
+
+
+
 int main(void)
 {
 	system("chcp 1252 > null");
-	srand(time(NULL));
-	cout << "Gerando número pseudoaleatório:" << endl;
-	int valor = rand();
-	if (valor > 16834)
-	{
-		cout << valor << endl;
-		cout << "GRANDE";
-	}
-	else {
-		cout << valor << endl;
-		cout << "PEQUENO";
-	}
+
+	Pequena();
+	Media();
+	Grande();
+	cout << "Programação de Computadores" << endl;
+	Grande();
+	Media();
+	Pequena();
+}
+
+void Linha() {
+	cout << "----------";
+}
+
+void Pequena() {
+	Linha();
+	cout << endl;
+}
+
+void Media() {
+	Linha();
+	Linha();
+	cout << endl;
+}
+
+void Grande() {
+	Linha();
+	Linha();
+	Linha();
+	cout << endl;
 }
