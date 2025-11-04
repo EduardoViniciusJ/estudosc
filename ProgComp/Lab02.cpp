@@ -8,17 +8,11 @@ using namespace std;
 int main(void)
 {
 	system("chcp 1252 > null");
+	int hours, minutes;
+	char ponteiros;
 
-	double custoFabrica, pctDistribuidor, impostos, soma;
-	
-	cout << "Custo de fábrica: ";
-	cin >> custoFabrica;
-	
-	pctDistribuidor = 0.28 * custoFabrica;
-	impostos = 0.45 * custoFabrica;
-	
-	soma = custoFabrica + pctDistribuidor + impostos;
-
-	cout << "O custo ao consumidor é de R$" << soma << endl;
-
+	cout << "Que horas são? ";
+	cin >> hours >> ponteiros >> minutes;
+	cout << "O seu relógio está atrasado" << endl;
+	cout << "Agora são " << hours + 1 << ponteiros << minutes << endl;
 }
