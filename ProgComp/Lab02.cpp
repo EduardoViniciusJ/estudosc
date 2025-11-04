@@ -1,18 +1,21 @@
 #include <iostream>
-#include <cstdlib>
-#include <string>
-
+#include <ctime>
 
 using namespace std;
 
 int main(void)
 {
 	system("chcp 1252 > null");
-	cout << "Gerando números psedoualeatórios:" << endl;
-	srand(1);
-	cout << rand() << endl;
-	cout << rand() << endl;
-	cout << rand() << endl;
-	cout << rand() << endl;
-	cout << rand() << endl;
+	srand(time(NULL));
+	cout << "Gerando número pseudoaleatório:" << endl;
+	int valor = rand();
+	if (valor > 16834)
+	{
+		cout << valor << endl;
+		cout << "GRANDE";
+	}
+	else {
+		cout << valor << endl;
+		cout << "PEQUENO";
+	}
 }
