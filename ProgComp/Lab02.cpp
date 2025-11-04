@@ -4,15 +4,20 @@
 
 using namespace std;
 
+int Media(int x, int y);
+
 int main()
 {
     system("chcp 1252 > null");
-    double rad, angle, seno;
-    const double pi = 3.14159265358979323846;
-
-    cout << "Digite um ângulo: ";
-    cin >> angle;
-    rad = angle * (pi / 180.0);
-    seno = sin(rad);
-    cout << "Seno = " << seno << endl;  
+    int x, y;
+    cout << "Digite um valor inteiro: ";
+    cin >> x;
+    cout << "Digite o outro valor inteiro: ";
+    cin >> y;
+    cout << "A média dos números é " << Media(x, y) << endl;
 }
+
+int Media(int x, int y) {
+    return (x + y) / 2;
+}
+
