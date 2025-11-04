@@ -4,31 +4,22 @@
 
 using namespace std;
 
-double VolumeCilindro(double raio, double altura);
+
+int Absoluto(int value);
 
 int main()
 {
 	system("chcp 1252 > null");
-	
-	double raio, altura, volume;
-	
-	cout << "Calcula o Valor de um Cilindro" << endl;
-	for (int i = 0; i < 30; i++) {
-		cout << "-";
-	}
-	cout << endl;
-	cout << "Entre com o raio da base : ";
-	cin >> raio;
-	cout << "Entre com a altura: ";
-	cin >> altura;
-	volume = VolumeCilindro(raio, altura);
-	cout << "O volume do cilindro é " << volume << endl;
 
+	int value, absoluto;
+	
+	cout << "Digite um número inteiro: ";
+	cin >> value;
+	absoluto = Absoluto(value);
+	cout << "O valor absoluto é " << absoluto;
 }
 
-double VolumeCilindro(double raio, double altura) {
-	double pi = 3.14159;
-
-	return pi * pow(raio, 2.0) * altura;
+int Absoluto(int value) {
+	return sqrt(pow(value, 2));
 }
 
