@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int Media(int x, int y);
+double Media(int x, int y);
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
     cout << "A média dos números é " << Media(x, y) << endl;
 }
 
-int Media(int x, int y) {
-    return (x + y) / 2;
+double Media(int x, int y) {
+    return (x + y) / 2.0;
 }
 
