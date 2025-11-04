@@ -8,11 +8,17 @@ using namespace std;
 int main(void)
 {
 	system("chcp 1252 > null");
-	int hours, minutes;
-	char ponteiros;
+	
+	int area, volume, a, b, altura, prisma;
 
-	cout << "Que horas são? ";
-	cin >> hours >> ponteiros >> minutes;
-	cout << "O seu relógio está atrasado" << endl;
-	cout << "Agora são " << hours + 1 << ponteiros << minutes << endl;
+	cout << "Lado a: ";
+	cin >> a;
+	cout << "Labo b: ";
+	cin >> b;
+	area = a * b;
+	cout << "Área da base = " << area << endl;
+	cout << "Altura: ";
+	cin >> altura;
+	prisma = area * altura;
+	cout << "Volume do prisma = " << prisma << endl;
 }
