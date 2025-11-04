@@ -3,44 +3,26 @@
 
 using namespace std;
 
-void Linha();
-void Pequena();
-void Media();
-void Grande();
-
-
+void UmTres();
+void Dois();
 
 int main(void)
 {
 	system("chcp 1252 > null");
 
-	Pequena();
-	Media();
-	Grande();
-	cout << "Programação de Computadores" << endl;
-	Grande();
-	Media();
-	Pequena();
+	cout << "Começando agora" << endl;
+	UmTres();
+	cout << "Pronto!";
+
 }
 
-void Linha() {
-	cout << "----------";
+void UmTres() {
+	cout << "Um ";
+	Dois();
+	cout << "Três" << endl;;
 }
 
-void Pequena() {
-	Linha();
-	cout << endl;
+void Dois() {
+	cout << "Dois ";
 }
 
-void Media() {
-	Linha();
-	Linha();
-	cout << endl;
-}
-
-void Grande() {
-	Linha();
-	Linha();
-	Linha();
-	cout << endl;
-}
