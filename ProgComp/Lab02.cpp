@@ -4,23 +4,29 @@
 
 using namespace std;
 
-double Aumento(double salario);
+double CalculoIMC(double altura, double massa);
 
 int main()
 {
 	system("chcp 1252 > null");
+	
+	double altura, massa, IMC;
 
-	double salario;
-
-	cout << "Salário atual: R$";
-	cin >> salario;
-	double aumento = Aumento(salario);
-	cout << "Salário ajustado para R$" << aumento;
+	cout << "Índice de Massa Corporal (IMC)" << endl;
+	cout << "-----------------------------" << endl;
+	cout << "Altura: ";
+	cin >> altura;
+	cout << "Massa: ";
+	cin >> massa;
+	IMC = CalculoIMC(altura, massa);
+	cout << "IMC: " << IMC;
 }
 
-double Aumento(double salario) {
-	return  salario + (salario * 0.15);
+double CalculoIMC(double altura, double massa) {
+	return massa / (pow(altura, 2));
 }
+
+
 
 
 
