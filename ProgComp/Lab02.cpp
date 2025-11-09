@@ -4,26 +4,23 @@
 
 using namespace std;
 
-
-double MediaHarmonica(double x, double y);
+double Aumento(double salario);
 
 int main()
 {
 	system("chcp 1252 > null");
 
-	double x, y, media;
+	double salario;
 
-	cout << "Entre com um número: ";
-	cin >> x;
-	cout << "Entre com o outro número: ";
-	cin >> y;
-	media= MediaHarmonica(x, y);
-	cout << "A média harmônica dos números é " << media;
+	cout << "Salário atual: R$";
+	cin >> salario;
+	double aumento = Aumento(salario);
+	cout << "Salário ajustado para R$" << aumento;
 }
 
-double MediaHarmonica(double x, double y) {
-
-	double calculo = 2.0 * x * y / (x + y);
-	return calculo;
+double Aumento(double salario) {
+	return  salario + (salario * 0.15);
 }
+
+
 
