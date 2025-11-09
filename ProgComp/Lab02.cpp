@@ -4,28 +4,29 @@
 
 using namespace std;
 
-double CalculoIMC(double altura, double massa);
+double ModuloVetor(double x, double y);
 
 int main()
 {
 	system("chcp 1252 > null");
+
+	double x, y, vetor;
+
+	cout << "Digite as coordenadas do vetor: " << endl;
+	cout << "x: ";
+	cin >> x;
+	cout << "y: ";
+	cin >> y;
+	cout << endl;
+	vetor = ModuloVetor(x, y);
+	cout << "O tamanho do vetor é " << vetor;
+
+}
+
+double ModuloVetor(double x, double y) {
 	
-	double altura, massa, IMC;
-
-	cout << "Índice de Massa Corporal (IMC)" << endl;
-	cout << "-----------------------------" << endl;
-	cout << "Altura: ";
-	cin >> altura;
-	cout << "Massa: ";
-	cin >> massa;
-	IMC = CalculoIMC(altura, massa);
-	cout << "IMC: " << IMC;
+	return sqrt((pow(x, 2) + pow(y, 2)));
 }
-
-double CalculoIMC(double altura, double massa) {
-	return massa / (pow(altura, 2));
-}
-
 
 
 
