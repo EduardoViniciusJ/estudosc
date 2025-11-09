@@ -5,24 +5,22 @@
 using namespace std;
 
 
-void Relogio(int horas, int minutos);
-
+void ConvertFahrenheit(double celsius);
 
 int main()
 {
 	system("chcp 1252 > null");
 
-	int horas, minutos;
+	double celsius;
 
-	cout << "Entre com o número de horas: ";
-	cin >> horas;
-	cout << "Entre com o número de minutos: ";
-	cin >> minutos;
-	Relogio(horas, minutos);
-	
+	cout << "Digite uma temperatura em graus Celsius: ";
+	cin >> celsius;
+	ConvertFahrenheit(celsius);
 }
 
-void Relogio(int horas, int minutos) {
-	cout << "Agora são " << horas << ":" << minutos;
+void ConvertFahrenheit(double celsius) {
+
+	double calculo = 1.8 * celsius + 32.0;
+	cout << celsius << " graus Celsius equivalem a " << calculo << " graus Fahrenheit.";
 }
 
