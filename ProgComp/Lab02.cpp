@@ -4,44 +4,25 @@
 
 using namespace std;
 
-int Inicializar();
-void Ligar();
-void Verificar();
-void Ativar();
+
+void Relogio(int horas, int minutos);
+
 
 int main()
 {
 	system("chcp 1252 > null");
 
-	int system = Inicializar();
-	
-	if (system > 16384) {
-		cout << endl;
-		cout << "Sistema funcionando." << endl;
-	}
-	else {
-		cout << endl;
-		cout << "Falha na inicialização." << endl;
-	}
+	int horas, minutos;
+
+	cout << "Entre com o número de horas: ";
+	cin >> horas;
+	cout << "Entre com o número de minutos: ";
+	cin >> minutos;
+	Relogio(horas, minutos);
 	
 }
 
-int Inicializar() {
-	cout << "Inicializando Sistema: " << endl;
-	Ligar();
-	Verificar();
-	Ativar();
-	cout << "Inicialização concluída." << endl;
-
-	return rand();
+void Relogio(int horas, int minutos) {
+	cout << "Agora são " << horas << ":" << minutos;
 }
 
-void Ligar() {
-	cout << " - Ligando dispositivos" << endl;
-}
-void Verificar() {
-	cout << " - Verificando integridade" << endl;
-}
-void Ativar() {
-	cout << " - Ativando Processos" << endl;
-}
