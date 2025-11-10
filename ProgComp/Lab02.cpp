@@ -4,30 +4,27 @@
 
 using namespace std;
 
-double ModuloVetor(double x, double y);
+double ConvertAngle(double x, double y);
 
 int main()
 {
 	system("chcp 1252 > null");
 
-	double x, y, vetor;
+	double x, y, angle;
 
-	cout << "Digite as coordenadas do vetor: " << endl;
+	cout << "Digite as coordenadas do vetor:" << endl;
 	cout << "x: ";
 	cin >> x;
 	cout << "y: ";
 	cin >> y;
 	cout << endl;
-	vetor = ModuloVetor(x, y);
-	cout << "O tamanho do vetor é " << vetor;
-
+	angle = ConvertAngle(x, y);
+	cout << "O ângulo do vetor é " << angle << " graus.";
 }
 
-double ModuloVetor(double x, double y) {
-	
-	return sqrt((pow(x, 2) + pow(y, 2)));
+double ConvertAngle(double x, double y) {
+	double resultado = atan2(y, x);
+	return (resultado * 180) / 3.141592;
 }
-
-
 
 
