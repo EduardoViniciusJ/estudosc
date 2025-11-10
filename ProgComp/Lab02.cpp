@@ -4,27 +4,31 @@
 
 using namespace std;
 
-double ConvertAngle(double x, double y);
+double Quadrado(double valor);
+double Cubo(double valor);
+double CuboDoQuadrado(double cubo);
 
 int main()
 {
 	system("chcp 1252 > null");
-
-	double x, y, angle;
-
-	cout << "Digite as coordenadas do vetor:" << endl;
-	cout << "x: ";
-	cin >> x;
-	cout << "y: ";
-	cin >> y;
+	double valor, quadrado;
+	cout << "Digite um valor: ";
+	cin >> valor;
 	cout << endl;
-	angle = ConvertAngle(x, y);
-	cout << "O ângulo do vetor é " << angle << " graus.";
+	quadrado = Quadrado(valor);
+	cout << "Quadrado = " << quadrado << endl;
+	cout << "Cubo = " << Cubo(valor)<< endl; 
+	cout << "Cubo do Quadrado = " << CuboDoQuadrado(quadrado) << endl;
 }
 
-double ConvertAngle(double x, double y) {
-	double resultado = atan2(y, x);
-	return (resultado * 180) / 3.141592;
+double Quadrado(double valor) {
+	return valor * valor;
 }
 
+double Cubo(double valor) {
+	return valor * valor * valor;
+}
 
+double CuboDoQuadrado(double valor) {
+	return Cubo(valor);
+}
