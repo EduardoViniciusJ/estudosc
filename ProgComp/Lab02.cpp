@@ -1,27 +1,53 @@
 #include <iostream>
 #include <ctime>
 #include <cmath>
+#include <climits>
 
 using namespace std;
 
-#define PRECOPASTEL 0.25
-#define PRECOPAO 0.30
+
+
+bool isShort(int);
+bool isInt(long long);
+
 
 int main()
 {
-
 	system("chcp 1252 > null");
 
-	double qtdPaes, qtdPasteis, total;
-	
-	cout << "Pães&Cia " << endl;
-	cout << endl;
-	cout << "Quantos pães? ";
-	cin >> qtdPaes;
-	cout << "Quantos pastéis? ";
-	cin >> qtdPasteis;
-	cout << endl;
-	total = (qtdPaes * PRECOPAO) + (qtdPasteis * PRECOPASTEL);
-	cout << "O total das compras é R$" << total;
-		
+
+	long long x;
+	cout << "Digite um valor inteiro: ";
+	cin >> x;
+	if (isShort(x) == true) {
+		cout << x << " cabe em 16 bits" << endl;
+	}
+	else {
+		cout << x << " não cabe em 16 bits" << endl;
+	}
+	if (isInt(x) == true) {
+		cout << x << " cabe em 32 bits " << endl;
+	}
+	else {
+		cout << x << " não cabe em 32 bits " << endl;
+	}
+}
+
+bool isShort(int x) 
+{
+	if (x >= SHRT_MIN && x <= SHRT_MAX) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+bool isInt(long long x) {
+	if (x >= INT_MIN && x <= INT_MAX) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
