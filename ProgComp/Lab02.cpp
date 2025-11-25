@@ -4,28 +4,24 @@
 
 using namespace std;
 
-#define MINUTOSPORHORA 60
+#define PRECOPASTEL 0.25
+#define PRECOPAO 0.30
 
 int main()
 {
 
-	int h1, m1, h2, m2;
-	char operador;
+	system("chcp 1252 > null");
 
-	cout << "Digite o horário de partida (HH:MM): ";
-	cin >> h1 >> operador >> m1;
-	cout << "Digite o horário de chegada (HH:MM): ";
-	cin >> h2 >> operador >> m2;
+	double qtdPaes, qtdPasteis, total;
+	
+	cout << "Pães&Cia " << endl;
 	cout << endl;
-	int minutosPartida = h1 * MINUTOSPORHORA + m1;
-	int minutosChegada = h2 * MINUTOSPORHORA + m2;
-
-	int tempo = minutosChegada - minutosPartida;
-
-	int horas = tempo / MINUTOSPORHORA;
-	int minutos = tempo % MINUTOSPORHORA;
-
-	cout << "O tempo total de viagem foi de " << horas << " horas e " << minutos << " min." << endl;
-
-
+	cout << "Quantos pães? ";
+	cin >> qtdPaes;
+	cout << "Quantos pastéis? ";
+	cin >> qtdPasteis;
+	cout << endl;
+	total = (qtdPaes * PRECOPAO) + (qtdPasteis * PRECOPASTEL);
+	cout << "O total das compras é R$" << total;
+		
 }
