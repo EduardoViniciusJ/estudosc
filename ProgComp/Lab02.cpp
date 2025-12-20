@@ -6,48 +6,46 @@
 using namespace std;
 
 
-
-bool isShort(int);
-bool isInt(long long);
-
-
 int main()
 {
 	system("chcp 1252 > null");
 
+	// Inverte os bits ou seja ele é 1 porém invertido fica 254 OPERADOR NEGATIVO ~ 
+	unsigned char estado = 1;
+	estado = ~estado;
+	cout << (int)estado << endl;
 
-	long long x;
-	cout << "Digite um valor inteiro: ";
-	cin >> x;
-	if (isShort(x) == true) {
-		cout << x << " cabe em 16 bits" << endl;
-	}
-	else {
-		cout << x << " não cabe em 16 bits" << endl;
-	}
-	if (isInt(x) == true) {
-		cout << x << " cabe em 32 bits " << endl;
-	}
-	else {
-		cout << x << " não cabe em 32 bits " << endl;
-	}
-}
 
-bool isShort(int x) 
-{
-	if (x >= SHRT_MIN && x <= SHRT_MAX) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
+	// Desloca uma certa quantidade de bits para ESQUERDA, nesse caso 3 bits foram para esquerda. OPERADOR <<
+	unsigned char estado1 = 1;
+	estado1 = estado1 << 3;
+	cout << (int)estado1 << endl;
 
-bool isInt(long long x) {
-	if (x >= INT_MIN && x <= INT_MAX) {
-		return true;
-	}
-	else {
-		return false;
-	}
+	// Desloca uma certa quantidade de bits para DIREITA, nesse caso 3 bits foram para esquerda. OPERADOR >>
+	unsigned char estado2 = 8;
+	estado2 = estado2 >> 3;
+	cout << (int)estado2 << endl;
+
+
+
+	// Faz um AND entre bits dos seus operandos, assim gerando um novo numero. OPERADOR &
+	unsigned char estado3 = 170;
+	estado3 = estado3 & 15;
+	cout << (int)estado3 << endl;
+
+	// Faz um OU entre bits dos seus operandos, assim gerando um novo numero. OPERADOR |
+	unsigned char estado4 = 170;
+	estado4 = estado4 | 15;
+	cout << (int)estado4 << endl;
+
+	// Faz um XOR entre bits dos seus operandos, assim gerando um novo numero. ^
+	unsigned char estado5 = 170;
+	estado5 = estado5 ^ 15;
+	cout << (int)estado5 << endl;
+
+
+
+	
+
+	
 }
