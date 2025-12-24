@@ -2,24 +2,25 @@
 using namespace std;
 
 
-char Codificar(char caractere);
-char Decodificar(char caractere);
+int bitsBaixo(unsigned int estado);
+
+
+
 
 int main() {
 
 	system("chcp 1252 > null");
+						
+	int valor;
+	cout << "Digite um valor inteiro: ";
+	cin >> valor;
+	cout << "Os 16 bits mais baixos desse valor correspondem ao número " << bitsBaixo(valor) << endl;
+}		
 
-	char entrada;
-	cout << "Digite o caractere por favor: ";
-	cin >> entrada;
-	char codificado = Codificar(entrada);
-	cout << "Caractere codificado " << codificado << endl;
-	cout << "Caractere descodificado " << Decodificar(codificado) << endl;
+int bitsBaixo(unsigned int estado) {
+	
+	return estado & 0xffff;
+}
+				
 
-}
-char Codificar(char caractere) {
-	return caractere + 3;
-}
-char Decodificar(char caractere) {
-	return caractere - 3;
-}
+
